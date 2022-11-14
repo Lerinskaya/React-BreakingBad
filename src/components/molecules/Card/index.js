@@ -1,16 +1,16 @@
 import React from "react";
 import style from './style.module.scss';
 
-const Card = () => {
+const Card = ({ card }) => {
     return (
         <div className={style.personCard}>
             <div className={style.personImage}>
-                <img src="https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg" alt="Walter White" />
+                <img src={card.img} alt={card.name} />
             </div>
             <div className={style.personInfo}>
-                <div className={style.personStatus}>alive</div>
-                <div className={style.personName}>Walter White</div>
-                <div className={style.birthDate}>09-07-1958</div>
+                <div className={style.personStatus}>{card.status}</div>
+                <div className={style.personName}>{card.name}</div>
+                <div className={style.birthDate}>{card.birthday}</div>
             </div>
         </div>
     );

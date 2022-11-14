@@ -1,9 +1,9 @@
-import Card from "./components/molecules/Card";
+import CardList from "./components/organisms/CardList";
 import './styles/general.scss';
 
 function App() {
     return (
-        <Card></Card>
+        <CardList />
     );
 }
 

@@ -1,0 +1,28 @@
+@import '/src/styles/general.scss';
+
+.loader {
+    display: flex;
+}
+
+.spinnerWave {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid $active;
+    animation: spinner 1.2s linear infinite;
+    box-shadow: inset -2px -2px 0 2px $inactive;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

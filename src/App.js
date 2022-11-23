@@ -11,7 +11,6 @@ function App() {
             <header style={{ margin: '3rem' }}>
                 <Link to="/" style={{ margin: '1rem' }}>Main</Link>
                 <Link to="/persons" style={{ margin: '1rem' }}>Persons</Link>
-                <Link to="/person" style={{ margin: '1rem' }}>Person</Link>
                 <Link to="/p" style={{ margin: '1rem' }}>Empty Page</Link>
             </header>
             <Routes>

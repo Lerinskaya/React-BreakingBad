@@ -7,13 +7,12 @@ import { Routes, Route, Link } from 'react-router-dom'
 
 const CardList = ({ persons, isLoading }) => {
     const cards = persons.map(person =>
-        <Link to="/person">< Card key={person.char_id} person={person} /> </Link>
+        <Link to="/person" key={person.char_id}>< Card key={person.char_id} person={person} /> </Link>
     );
 
     return (
         isLoading ? <Loader /> :
             <div className={style.cardList}>
-                {/* <Link to="/person">{cards}</Link> */}
                 {cards}
                 <Routes>
                     <Route path="/person" element={<PersonInfoPage />} />

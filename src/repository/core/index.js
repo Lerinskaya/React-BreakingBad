@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 class Core {
     getPersons = async () => {
         const result = {

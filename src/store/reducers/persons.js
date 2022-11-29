@@ -3,6 +3,7 @@ import { SET_PERSONS } from "../actionTypes/person";
 import { SET_PERSON_BY_ID } from "../actionTypes/person";
 import { SET_LOADING } from "../actionTypes/person";
 
+
 const initialState = {
     persons: [],
     person: {},

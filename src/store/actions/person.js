@@ -4,6 +4,7 @@ import { SET_PERSON_BY_ID } from "../actionTypes/person";
 import { SET_LOADING } from "../actionTypes/person";
 import Repository from "../../repository";
 
+
 export function getPersonsList() {
     return async (dispatch) => {
         dispatch(isLoading(true));

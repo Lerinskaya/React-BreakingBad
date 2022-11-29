@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom';
+
 import PersonCard from "../../organisms/Person/container";
+
 import style from './style.module.scss';
 import img from '../../../styles/img/back.png';
-import { Link } from 'react-router-dom';
+
 
 function PersonInfoPage() {
     return (

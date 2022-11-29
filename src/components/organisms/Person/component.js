@@ -1,6 +1,7 @@
-import React from "react";
 import Loader from "../../atoms/Loader/Loader";
+
 import style from './style.module.scss';
+
 
 const PersonCard = ({ person, isLoading }) => {
     return (

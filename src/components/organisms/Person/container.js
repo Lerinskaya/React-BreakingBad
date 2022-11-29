@@ -1,8 +1,9 @@
-import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router";
+
 import { getPerson } from "../../../store/actions/person";
 import PersonCard from "./component.js";
-import { useParams } from "react-router";
 
 
 export const PersonCardContainer = () => {
@@ -14,7 +15,10 @@ export const PersonCardContainer = () => {
     dispatch(getPerson(id));
   }, [id]);
 
-  return <PersonCard person={person} isLoading={isLoading} />;
+  return <PersonCard
+    person={person}
+    isLoading={isLoading}
+  />;
 };
 
 export default PersonCardContainer;

@@ -22,7 +22,7 @@ function persons(state = initialState, { type, payload }) {
                     img: payload.img,
                     status: payload.status,
                 }],
-                isLoading: false
+                isLoading: false,
             }
         };
         case SET_PERSONS: {

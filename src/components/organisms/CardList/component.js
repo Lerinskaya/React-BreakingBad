@@ -10,7 +10,7 @@ import style from './style.module.scss';
 const CardList = ({ persons, isLoading }) => {
     const cards = persons.map(person =>
         <Link to={'/person/' + person.char_id}>
-            < Card
+            <Card
                 key={person.char_id}
                 person={person}
             />

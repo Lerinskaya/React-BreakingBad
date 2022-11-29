@@ -1,5 +1,6 @@
 import style from './style.module.scss';
 
+
 const Card = ({ person }) => {
     return (
         <div className={style.personCard}>

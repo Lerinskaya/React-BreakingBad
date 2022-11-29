@@ -1,27 +1,15 @@
-@import '/src/styles/general.scss';
+@import '../../../styles/general.scss';
 
 
 .personCard {
     display: flex;
-    max-width: 23.7rem;
-    background: $white;
-    box-shadow: 0px 4px 8px $shadow;
     border-radius: 4px;
     cursor: pointer;
 
-    &:hover {
-        transition: transform 0.5s;
-        box-shadow: 0px 4px 8px $shadowHover;
-    }
-
-    &:active {
-        box-shadow: 0px 4px 8px $shadow;
-    }
-
     .personImage {
-        width: 7.75rem;
-        height: 7.75rem;
-        margin-right: 1.56rem;
+        width: 36.5rem;
+        height: 36.5rem;
+        margin-right: 6.4rem;
 
         img {
             width: 100%;
@@ -33,8 +21,13 @@
     }
 
     .personInfo {
-        margin-top: 1rem;
         font-weight: 400;
+        max-width: 25.6rem;
+        font-size: 1rem;
+
+        span {
+            color: $grey;
+        }
 
         .personStatus {
             color: $green;
@@ -43,18 +36,21 @@
             display: flex;
             font-size: 0.75rem;
             padding: 8px 12px;
-            margin-bottom: 0.75rem;
+            margin-bottom: 2rem;
         }
 
         .personName {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .personNickname {
+            margin-bottom: 1rem;
         }
 
         .birthDate {
-            opacity: 0.4;
-            font-size: 0.75rem;
+            margin-bottom: 2rem;
         }
-
     }
 }

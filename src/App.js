@@ -1,9 +1,12 @@
 import { Routes, Route, Link } from 'react-router-dom'
+
 import PersonsPage from "./components/pages/Persons/persons";
 import PersonInfoPage from "./components/pages/PersonInfo/personInfo";
 import MainPage from "./components/pages/Main/main";
 import NotFound from "./components/pages/NotFound/NotFound";
+
 import './styles/general.scss';
+
 
 function App() {
     return (
@@ -16,7 +19,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/persons" element={<PersonsPage />} />
-                <Route path="/person" element={<PersonInfoPage />} />
+                <Route path="/person/:id" element={<PersonInfoPage />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </>

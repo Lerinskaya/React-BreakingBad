@@ -1,0 +1,31 @@
+@import '../../../styles/general.scss';
+
+.page {
+    background: $lightGrey;
+    padding: 2.5rem 0 10.4rem 0;
+
+    .infoPage {
+        margin: 0 auto;
+        max-width: 69rem;
+
+        .back {
+            display: flex;
+
+            p {
+                font-size: 1rem;
+                margin-bottom: 3rem;
+            }
+
+            img {
+                width: 1rem;
+                height: 1rem;
+                margin-right: 0.75rem;
+            }
+        }
+
+        .infoPerson {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import '../../../styles/general.scss';
+
+.personCard {
+    display: flex;
+    border-radius: 4px;
+    cursor: pointer;
+
+    .personImage {
+        width: 36.5rem;
+        height: 36.5rem;
+        margin-right: 6.4rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 4px 0 0 4px;
+        }
+    }
+
+    .personInfo {
+        font-weight: 400;
+        max-width: 25.6rem;
+        font-size: 1rem;
+
+        span {
+            color: $grey;
+        }
+
+        .personStatus {
+            color: $green;
+            background: $darkGreen;
+            max-width: fit-content;
+            display: flex;
+            font-size: 0.75rem;
+            padding: 8px 12px;
+            margin-bottom: 2rem;
+        }
+
+        .personName {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .personNickname {
+            margin-bottom: 1rem;
+        }
+
+        .birthDate {
+            margin-bottom: 2rem;
+        }
+    }
+}

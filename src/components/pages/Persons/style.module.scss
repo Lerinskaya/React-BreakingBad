@@ -1,11 +1,18 @@
-.personsList {
-    margin: 0 auto;
-    max-width: 74rem;
+@import '../../../styles/general.scss';
 
-    .catalog {
-        font-family: 'Roboto';
-        font-weight: 500;
-        font-size: 2rem;
-        margin: 0 0 1.56rem 1rem;
+.page {
+    background: $lightGrey;
+    padding: 2.5rem 0 10.4rem 0;
+
+    .personsList {
+        margin: 0 auto;
+        max-width: 74rem;
+
+        .catalog {
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 2rem;
+            margin: 0 0 1.56rem 1rem;
+        }
     }
 }

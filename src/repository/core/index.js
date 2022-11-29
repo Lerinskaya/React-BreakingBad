@@ -15,6 +15,21 @@ class Core {
         }
         return result
     }
+
+    getPersonById = async (id) => {
+        const result = {
+            value: null,
+            error: null,
+        };
+        try {
+            const response = await axios.get(`https://www.breakingbadapi.com/api/characters/${id}`)
+            result.value = response.data[0]
+
+        } catch (e) {
+            result.error = e.response.data
+        }
+        return result
+    }
 }
 
 export default new Core()

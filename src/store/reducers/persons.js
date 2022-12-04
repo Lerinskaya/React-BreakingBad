@@ -1,13 +1,17 @@
 import { ADD_PERSON } from "../actionTypes/person";
 import { SET_PERSONS } from "../actionTypes/person";
 import { SET_PERSON_BY_ID } from "../actionTypes/person";
+import { SET_QUOTE_BY_ID } from "../actionTypes/person";
 import { SET_LOADING } from "../actionTypes/person";
+import { SET_LOADING_QUOTE } from "../actionTypes/person";
 
 
 const initialState = {
     persons: [],
     person: {},
+    quote: {},
     isLoading: true,
+    isLoadingQuote: true
 };
 
 function persons(state = initialState, { type, payload }) {
@@ -23,13 +27,17 @@ function persons(state = initialState, { type, payload }) {
                     status: payload.status,
                 }],
                 isLoading: false,
+                isLoadingQuote: true
             }
         };
         case SET_PERSONS: {
-            return { ...state, persons: payload, isLoading: false }
+            return { ...state, persons: payload, isLoading: false, isLoadingQuote: true }
         };
         case SET_LOADING: {
             return { ...state, isLoading: true }
+        };
+        case SET_LOADING_QUOTE: {
+            return { ...state, isLoading: false, isLoadingQuote: true }
         };
         case SET_PERSON_BY_ID: {
             return {
@@ -43,6 +51,13 @@ function persons(state = initialState, { type, payload }) {
                     status: payload.status,
                 },
                 isLoading: false
+            }
+        };
+        case SET_QUOTE_BY_ID: {
+            return {
+                ...state, quote: payload.quote ? payload.quote : 'This character has no quote',
+                isLoading: false,
+                isLoadingQuote: false
             }
         };
         default:

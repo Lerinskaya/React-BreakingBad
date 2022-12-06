@@ -9,7 +9,7 @@ function MainPage() {
     return (
         <div className={style.mainPage}>
             <picture>
-                <source srcset={img} alt="main" />
+                <source srcSet={img} alt="main" />
                 <img src={image} alt="main" loading="lazy" className={style.mainImage} />
             </picture>
         </div>

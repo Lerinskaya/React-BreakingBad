@@ -31,7 +31,7 @@ class Core {
         }
         return result
     }
-    setQuoteById = async (id) => {
+    getQuoteById = async (id) => {
         const result = {
             value: null,
             error: null,

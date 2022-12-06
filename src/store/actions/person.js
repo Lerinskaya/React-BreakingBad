@@ -3,7 +3,7 @@ import { SET_PERSONS } from "../actionTypes/person";
 import { SET_PERSON_BY_ID } from "../actionTypes/person";
 import { SET_LOADING } from "../actionTypes/person";
 import { SET_LOADING_QUOTE } from "../actionTypes/person";
-import { SET_QUOTE_BY_ID } from "../actionTypes/person";
+import { GET_QUOTE_BY_ID } from "../actionTypes/person";
 
 import Repository from "../../repository";
 
@@ -32,11 +32,11 @@ export function getPerson(id) {
 
 export function getQuote(id) {
     return async (dispatch) => {
-        const { value, error } = await Repository.APICore.setQuoteById(id);
+        const { value, error } = await Repository.APICore.getQuoteById(id);
         if (error || !value) {
             alert('error')
         }
-        dispatch(setQuoteById(...value))
+        dispatch(getQuoteById(...value))
     };
 }
 
@@ -58,9 +58,9 @@ export function setPersonById(value) {
         payload: value,
     };
 }
-export function setQuoteById(quote) {
+export function getQuoteById(quote) {
     return {
-        type: SET_QUOTE_BY_ID,
+        type: GET_QUOTE_BY_ID,
         payload: { quote },
     };
 }

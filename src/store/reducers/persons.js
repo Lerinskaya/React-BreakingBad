@@ -1,7 +1,7 @@
 import { ADD_PERSON } from "../actionTypes/person";
 import { SET_PERSONS } from "../actionTypes/person";
 import { SET_PERSON_BY_ID } from "../actionTypes/person";
-import { SET_QUOTE_BY_ID } from "../actionTypes/person";
+import { GET_QUOTE_BY_ID } from "../actionTypes/person";
 import { SET_LOADING } from "../actionTypes/person";
 import { SET_LOADING_QUOTE } from "../actionTypes/person";
 
@@ -53,7 +53,7 @@ function persons(state = initialState, { type, payload }) {
                 isLoading: false
             }
         };
-        case SET_QUOTE_BY_ID: {
+        case GET_QUOTE_BY_ID: {
             return {
                 ...state, quote: payload.quote ? payload.quote : 'This character has no quote',
                 isLoading: false,

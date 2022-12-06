@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 import PersonCard from "../../organisms/Person/container";
-// import Quote from "../../organisms/Quote/container";
 
 import style from './style.module.scss';
 import img from '../../../styles/img/back.png';

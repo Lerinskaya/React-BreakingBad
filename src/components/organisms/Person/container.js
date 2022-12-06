@@ -16,8 +16,6 @@ export const PersonCardContainer = () => {
 
   useEffect(() => {
     dispatch(getPerson(id));
-  }, [id]);
-  useEffect(() => {
     dispatch(getQuote(id))
   }, [id]);
 

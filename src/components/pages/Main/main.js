@@ -1,6 +1,18 @@
+import React from 'react';
+
+import style from './style.module.scss';
+import img from '../../../styles/img/main.png';
+import image from '../../../styles/img/main.webp';
+
+
 function MainPage() {
     return (
-        <h1 style={{ margin: '4rem', height: '30rem' }}>Main</h1>
+        <div className={style.mainPage}>
+            <picture>
+                <source srcSet={img} alt="main" />
+                <img src={image} alt="main" loading="lazy" className={style.mainImage} />
+            </picture>
+        </div>
     );
 }
 

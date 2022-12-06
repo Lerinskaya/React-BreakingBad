@@ -2,6 +2,9 @@ import { ADD_PERSON } from "../actionTypes/person";
 import { SET_PERSONS } from "../actionTypes/person";
 import { SET_PERSON_BY_ID } from "../actionTypes/person";
 import { SET_LOADING } from "../actionTypes/person";
+import { SET_LOADING_QUOTE } from "../actionTypes/person";
+import { GET_QUOTE_BY_ID } from "../actionTypes/person";
+
 import Repository from "../../repository";
 
 
@@ -27,6 +30,16 @@ export function getPerson(id) {
     };
 }
 
+export function getQuote(id) {
+    return async (dispatch) => {
+        const { value, error } = await Repository.APICore.getQuoteById(id);
+        if (error || !value) {
+            alert('error')
+        }
+        dispatch(getQuoteById(...value))
+    };
+}
+
 export function addPerson(name, birthday, img, status) {
     return {
         type: ADD_PERSON,
@@ -45,9 +58,21 @@ export function setPersonById(value) {
         payload: value,
     };
 }
+export function getQuoteById(quote) {
+    return {
+        type: GET_QUOTE_BY_ID,
+        payload: { quote },
+    };
+}
 export function isLoading(value) {
     return {
         type: SET_LOADING,
+        payload: value,
+    };
+}
+export function isLoadingQuote(value) {
+    return {
+        type: SET_LOADING_QUOTE,
         payload: value,
     };
 }

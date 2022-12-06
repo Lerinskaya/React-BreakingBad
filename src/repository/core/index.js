@@ -31,6 +31,20 @@ class Core {
         }
         return result
     }
+    getQuoteById = async (id) => {
+        const result = {
+            value: null,
+            error: null,
+        };
+        try {
+            const response = await axios.get(`https://www.breakingbadapi.com/api/quotes/${id}`)
+            result.value = response.data
+
+        } catch (e) {
+            result.error = e.response.data
+        }
+        return result
+    }
 }
 
 export default new Core()

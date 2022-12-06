@@ -3,7 +3,7 @@ import Loader from "../../atoms/Loader/Loader";
 import style from './style.module.scss';
 
 
-const PersonCard = ({ person, isLoading }) => {
+const PersonCard = ({ person, isLoading, quote }) => {
     return (
         isLoading ? <Loader /> :
             <div className={style.personCard}>
@@ -15,8 +15,9 @@ const PersonCard = ({ person, isLoading }) => {
                     <div className={style.personName}>{person.name}</div>
                     <div className={style.personNickname}><span>Nickname: </span>{person.nickname}</div>
                     <div className={style.birthDate}><span>Date of birth: </span>{person.birthday}</div>
-                    <div className={style.quote}><span>Quote: </span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non,
-                        aliquam laoreet vivamus sed. Diam fames mi, quam tellus cursus volutpat velit massa"</div>
+                    <div className={style.quote}>
+                        <span>Quote: </span> <p>{quote.quote}</p>
+                    </div>
                 </div>
             </div>
     );

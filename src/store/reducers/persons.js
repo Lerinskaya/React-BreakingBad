@@ -4,6 +4,7 @@ import { SET_PERSON_BY_ID } from "../actionTypes/person";
 import { GET_QUOTE_BY_ID } from "../actionTypes/person";
 import { SET_LOADING } from "../actionTypes/person";
 import { SET_LOADING_QUOTE } from "../actionTypes/person";
+import { IS_GRID } from "../actionTypes/person";
 
 
 const initialState = {
@@ -11,7 +12,8 @@ const initialState = {
     person: {},
     quote: {},
     isLoading: true,
-    isLoadingQuote: true
+    isLoadingQuote: true,
+    isGrid: true
 };
 
 function persons(state = initialState, { type, payload }) {
@@ -60,6 +62,9 @@ function persons(state = initialState, { type, payload }) {
                 isLoadingQuote: false
             }
         };
+        case IS_GRID: {
+            return { ...state, isGrid: payload };
+        }
         default:
             return state;
     }

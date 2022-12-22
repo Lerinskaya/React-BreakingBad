@@ -58,3 +58,55 @@
 
     }
 }
+
+// .list {
+//     max-width: 100%;
+// }
+
+// .list {
+//     padding: 0.5rem 0;
+//     max-width: 100%;
+//     max-height: 5rem;
+//     background: none;
+//     box-shadow: none;
+//     border-top: 0.0625rem solid gray;
+//     border-bottom: 0.0625rem solid gray;
+//     border-radius: 0;
+
+//     &:not(:last-child) {
+//         border-bottom: none;
+//     }
+
+//     &:hover {
+//         transform: none;
+//         background: darken(white, 3%);
+//     }
+
+//     &:focus-visible {
+//         box-shadow: 0 0 0 0.125rem grey;
+//     }
+
+//     .photoBlock {
+//         width: 4.0625rem;
+//         height: 4.0625rem;
+
+//         .photo {
+//             border-radius: 0;
+//         }
+//     }
+
+//     .description {
+//         max-width: 48.125rem;
+//         width: 100%;
+//         padding: 1rem 2.5rem;
+//         display: grid;
+//         grid-template-columns: repeat(3, 1fr);
+//         justify-items: start;
+//         align-items: center;
+
+//         .status {
+//             margin-bottom: 0;
+//         }
+
+//     }
+// }

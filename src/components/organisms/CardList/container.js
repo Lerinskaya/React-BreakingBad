@@ -9,6 +9,7 @@ export const CardListContainer = () => {
   const dispatch = useDispatch();
   const persons = useSelector((state) => state.persons);
   const isLoading = useSelector((state) => state.isLoading);
+  const grid = useSelector((state) => state.isGrid);
   useEffect(() => {
     dispatch(getPersonsList());
   }, []);
@@ -21,6 +22,7 @@ export const CardListContainer = () => {
     persons={persons}
     add={add}
     isLoading={isLoading}
+    grid={grid}
   />;
 };
 

@@ -7,7 +7,16 @@ import Loader from "../../atoms/Loader/Loader";
 import style from './style.module.scss';
 
 
-const CardList = ({ persons, isLoading }) => {
+const CardList = ({ persons, isLoading, grid }) => {
+    let list;
+    let status;
+    if (grid) {
+        list = style.cardList;
+        status = style.none;
+    } else {
+        list = style.list;
+        status = style.block
+    }
     const cards = persons.map(person =>
         <Link to={'/person/' + person.char_id}>
             <Card
@@ -19,9 +28,12 @@ const CardList = ({ persons, isLoading }) => {
 
     return (
         isLoading ? <Loader /> :
-            <div className={style.cardList}>
-                {cards}
-            </div>
+            <>
+                <div className={status}> <p>Status</p> <p>Name</p> <p>Birth Date</p> </div>
+                <div className={list}>
+                    {cards}
+                </div>
+            </>
     );
 }
 

@@ -8,9 +8,9 @@ const Card = ({ person }) => {
                 <img src={person.img} alt={person.name} />
             </div>
             <div className={style.personInfo}>
-                <div className={style.personStatus}>{person.status}</div>
-                <div className={style.personName}>{person.name}</div>
-                <div className={style.birthDate}>{person.birthday}</div>
+                <p className={style.personStatus}>{person.status}</p>
+                <p className={style.personName}>{person.name}</p>
+                <p className={style.birthDate}>{person.birthday}</p>
             </div>
         </div>
     );

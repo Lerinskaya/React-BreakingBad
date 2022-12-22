@@ -1,0 +1,23 @@
+@import '../../../styles/general.scss';
+
+.icons {
+    margin-right: 1rem;
+
+    button {
+        background: none;
+        margin-left: 0.5rem;
+        cursor: pointer;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        svg {
+            stroke: $grey;
+
+            &.active {
+                stroke: $yellow;
+            }
+        }
+    }
+}

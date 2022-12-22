@@ -9,6 +9,11 @@
         margin: 0 auto;
         max-width: 74rem;
 
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
         .catalog {
             font-family: 'Roboto';
             font-weight: 500;

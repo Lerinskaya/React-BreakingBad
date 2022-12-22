@@ -4,6 +4,7 @@ import { SET_PERSON_BY_ID } from "../actionTypes/person";
 import { SET_LOADING } from "../actionTypes/person";
 import { SET_LOADING_QUOTE } from "../actionTypes/person";
 import { GET_QUOTE_BY_ID } from "../actionTypes/person";
+import { IS_GRID } from "../actionTypes/person";
 
 import Repository from "../../repository";
 
@@ -76,3 +77,9 @@ export function isLoadingQuote(value) {
         payload: value,
     };
 }
+export function toggleHandler(value) {
+    return {
+        type: IS_GRID,
+        payload: value,
+    };
+};
